@@ -1,0 +1,10 @@
+@use "sass:color";
+// Bootstrap
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+// @import "bootstrap-icons/font/bootstrap-icons.css";
+@import "custom";
