@@ -20,8 +20,8 @@ export default defineNuxtConfig({
         }
     ],
     components: { global: true, dirs: ['~/components'] },
-    modules: ['@nuxtjs/color-mode'],
-    colorMode: {
+    // modules: ['@nuxtjs/color-mode'],
+    /*colorMode: {
         preference: 'system', // default value of $colorMode.preference
         fallback: 'light', // fallback value if not system preference found
         hid: 'nuxt-color-mode-script',
@@ -30,5 +30,5 @@ export default defineNuxtConfig({
         classPrefix: '',
         classSuffix: '-mode',
         storageKey: 'nuxt-color-mode'
-      }
+      }*/
 })
