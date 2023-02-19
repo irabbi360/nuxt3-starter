@@ -9,11 +9,11 @@
         <!-- End Heading -->
 
         <!-- Form -->
-        <form class="js-validate needs-validation" novalidate="">
+        <form class="js-validate needs-validation" @click.prevent="authLogin">
           <!-- Form -->
           <div class="mb-4">
             <label class="form-label" for="signupSimpleLoginEmail">Your email</label>
-            <input type="email" class="form-control form-control-lg" name="email" id="signupSimpleLoginEmail" placeholder="email@site.com" aria-label="email@site.com" required="">
+            <input type="email" class="form-control form-control-lg" name="email" id="signupSimpleLoginEmail" placeholder="email@site.com" aria-label="email@site.com">
             <span class="invalid-feedback">Please enter a valid email address.</span>
           </div>
           <!-- End Form -->
@@ -27,12 +27,7 @@
             </div>
 
             <div class="input-group input-group-merge" data-hs-validation-validate-class="">
-              <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupSimpleLoginPassword" placeholder="8+ characters required" aria-label="8+ characters required" required="" minlength="8" data-hs-toggle-password-options="{
-                     &quot;target&quot;: &quot;#changePassTarget&quot;,
-                     &quot;defaultClass&quot;: &quot;bi-eye-slash&quot;,
-                     &quot;showClass&quot;: &quot;bi-eye&quot;,
-                     &quot;classChangeTarget&quot;: &quot;#changePassIcon&quot;
-                   }">
+              <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupSimpleLoginPassword" placeholder="8+ characters required" aria-label="8+ characters required" minlength="8">
               <a id="changePassTarget" class="input-group-append input-group-text" href="javascript:;">
                 <i id="changePassIcon" class="bi-eye-slash"></i>
               </a>
@@ -54,3 +49,13 @@
       </div>
     </div>
 </template>
+
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const authLogin = () => {
+  router.push('/admin')
+}
+</script>

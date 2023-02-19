@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         }
     },
     ssr: process.env.NODE_ENV !== "development",
-    css: ['~/assets/scss/style.scss'],
+    css: ['~/assets/scss/style.scss', '~/assets/css/dashboard.css'],
     plugins: [
         {
           src: 'plugins/bootstrap.js',
