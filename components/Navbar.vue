@@ -72,10 +72,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <NuxtLink to="/auth/login" class="nav-link">Login</NuxtLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <NuxtLink to="/auth/register" class="nav-link">Register</NuxtLink>
           </li>
         </ul>
       </div>
