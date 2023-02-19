@@ -1,0 +1,5 @@
+{
+    "welcome": "Bienvenue dans Nuxt 3 Starter",
+    "hello": "Bonjour, {name}!",
+    "language": "Langue"
+}

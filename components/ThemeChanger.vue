@@ -1,8 +1,7 @@
 <template>
     <li class="nav-item dropdown">
-        <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+        <a class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
                 id="bd-theme"
-                type="button"
                 aria-expanded="false"
                 data-bs-toggle="dropdown"
                 data-bs-display="static">
@@ -11,7 +10,7 @@
             <use v-if="selectedTheme === 'dark'" href="#moon-stars-fill"></use>
             <use v-if="selectedTheme === 'light'" href="#sun-fill"></use>
             </svg>
-        </button>
+        </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme"
             style="--bs-dropdown-min-width: 8rem;">
             <li>
