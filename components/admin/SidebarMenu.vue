@@ -9,16 +9,16 @@
             </NuxtLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <NuxtLink to="/admin/users" class="nav-link">
               <span data-feather="file" class="align-text-bottom"></span>
-              Orders
-            </a>
+              Users
+            </NuxtLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <NuxtLink to="/admin/posts" class="nav-link">
               <span data-feather="shopping-cart" class="align-text-bottom"></span>
-              Products
-            </a>
+              Posts
+            </NuxtLink>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
