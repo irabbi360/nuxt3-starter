@@ -9,18 +9,16 @@
 }
 
 .content-space-3 {
-  padding-top: 7.5rem!important;
-  padding-bottom: 7.5rem!important;
+  padding-top: 5.5rem!important;
+  padding-bottom: 5.5rem!important;
 }
-
-@media (min-width: 992px){
-  .content-space-b-lg-3 {
-    padding-bottom: 7.5rem!important;
-}
-}
-
 @media (min-width: 992px){
   .content-space-t-lg-4 {
     padding-top: 10rem!important;
+  }
 }
+@media (min-width: 992px){
+  .content-space-b-lg-3 {
+    padding-bottom: 7.5rem!important;
+  }
 }

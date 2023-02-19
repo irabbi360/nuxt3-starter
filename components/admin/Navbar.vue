@@ -16,7 +16,7 @@
       <a href="javascript:void(0)" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           Mr Admin
       </a>
-      <ul class="dropdown-menu dropdown-menu-lg-end border-0 shadow-sm rounded-0">
+      <ul class="dropdown-menu dropdown-menu-md-end border-0 shadow-lg rounded-0">
           <li><a class="dropdown-item" href="#">Profile</a></li>
           <li><a class="dropdown-item" href="#">Change Password</a></li>
           <li><hr class="dropdown-divider"></li>

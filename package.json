@@ -1,4 +1,13 @@
 {
+  "name": "nuxt3-starter",
+  "version": "0.1.0",
+  "description": "a Nuxt 3 starter template or boilerplate with a lot of useful features. Nuxt3 + Bootstrap 5",
+  "repository": {
+    "type": "git",
+    "url": "git://https://github.com/irabbi360/nuxt3-starter"
+  },
+  "author": "irabbi360",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "nuxt build",
