@@ -12,6 +12,18 @@
   padding-top: 5.5rem!important;
   padding-bottom: 5.5rem!important;
 }
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: #cbd5e1;
+  border: 4px solid #f3f4f6;
+  border-radius: 9999px;
+}
+
 @media (min-width: 992px){
   .content-space-t-lg-4 {
     padding-top: 10rem!important;
