@@ -11,7 +11,6 @@
             <use v-if="selectedTheme === 'dark'" href="#moon-stars-fill"></use>
             <use v-if="selectedTheme === 'light'" href="#sun-fill"></use>
             </svg>
-            <span class="ms-2 text-capitalize">{{ selectedTheme }}</span>
         </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme"
             style="--bs-dropdown-min-width: 8rem;">
