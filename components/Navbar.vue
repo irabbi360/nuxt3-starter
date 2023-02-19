@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <NuxtLink to="/" class="nav-link active" aria-current="page">Home</NuxtLink>
+            <NuxtLink to="/getting-started" class="nav-link">Getting Started</NuxtLink>
           </li>
           <li class="nav-item">
             <NuxtLink to="/blank" class="nav-link">Blank</NuxtLink>
