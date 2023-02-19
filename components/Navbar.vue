@@ -18,6 +18,7 @@
             <NuxtLink to="/blank" class="nav-link">Blank</NuxtLink>
           </li>
           <ThemeChanger />
+          <LangSwitcher />
           <li class="nav-item">
             <NuxtLink to="/auth/login" class="nav-link">Login</NuxtLink>
           </li>
@@ -30,7 +31,10 @@
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+import { localePath } from 'vue-i18n-routing';
+
+</script>
 
 <style scoped>
 .navbar-brand svg {

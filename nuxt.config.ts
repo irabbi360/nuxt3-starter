@@ -12,7 +12,9 @@ export default defineNuxtConfig({
         }
     },
     ssr: process.env.NODE_ENV !== "development",
+
     css: ['~/assets/scss/style.scss', '~/assets/css/dashboard.css'],
+
     plugins: [
         {
           src: 'plugins/bootstrap.js',
@@ -20,15 +22,34 @@ export default defineNuxtConfig({
         }
     ],
     components: { global: true, dirs: ['~/components'] },
-    // modules: ['@nuxtjs/color-mode'],
-    /*colorMode: {
-        preference: 'system', // default value of $colorMode.preference
-        fallback: 'light', // fallback value if not system preference found
-        hid: 'nuxt-color-mode-script',
-        globalName: '__NUXT_COLOR_MODE__',
-        componentName: 'ColorScheme',
-        classPrefix: '',
-        classSuffix: '-mode',
-        storageKey: 'nuxt-color-mode'
-      }*/
+    modules: [
+        '@nuxtjs/i18n',
+    ],
+    i18n: {
+        strategy: 'prefix_except_default',
+        vueI18n: {
+            legacy: false,
+            locale: 'en',
+        },
+        locales: [
+          {
+            code: 'en',
+            name: 'English',
+            file: 'en-US.json'
+          },
+          {
+            code: 'es',
+            name: 'Español',
+            file: 'es-ES.json'
+          },
+          {
+            code: 'fr',
+            name: 'Français',
+            file: 'fr-FR.json'
+          }
+        ],
+        lazy: true,
+        langDir: 'lang',
+        defaultLocale: 'en'
+      },
 })
