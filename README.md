@@ -37,6 +37,10 @@ pnpm install
 Start the development server on http://localhost:3000
 
 ```bash
+# yarn
+yarn dev
+
+# npm
 npm run dev
 ```
 
@@ -45,12 +49,20 @@ npm run dev
 Build the application for production:
 
 ```bash
+# yarn
+yarn build
+
+# npm
 npm run build
 ```
 
 Locally preview production build:
 
 ```bash
+# yarn
+yarn build
+
+# npm
 npm run preview
 ```
 
