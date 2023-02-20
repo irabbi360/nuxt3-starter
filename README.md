@@ -1,8 +1,23 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 starter template and boilerplate with a lot of useful features. Nuxt 3 + Bootstrap 5 with Admin panel
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
+
+This boilerplate uses the following tools::
+## Feature
+- ✅ Bootstrap 5 Admin Panel 
+- ✅ Dark Mode
+- ✅ Vue I18n Multi Language
+- ✅ Login
+- ✅ Registration
+
+## How To Use
+#### Clone the repository
+
+```bash
+git clone https://github.com/irabbi360/nuxt3-starter.git
+```
 
 Make sure to install the dependencies:
 
