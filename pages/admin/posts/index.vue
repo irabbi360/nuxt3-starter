@@ -6,12 +6,16 @@
 </template>
 
 <script setup>
+import {usePosts} from "../../../composables/posts";
+
 definePageMeta({
   layout: 'admin',
 })
 
-const config = useRuntimeConfig();
+const {posts, getPosts } = usePosts();
 
-const posts = await $fetch('/posts', {baseURL: config.public.API_URL});
+onMounted(async () => {
+  await getPosts()
+})
 
 </script>

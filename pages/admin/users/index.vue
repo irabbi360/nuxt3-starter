@@ -10,5 +10,23 @@ definePageMeta({
   layout: 'admin',
 })
 
-const users = await $fetch('https://jsonplaceholder.typicode.com/users');
+const {users, getUsers} = useUser();
+
+onMounted(async () => {
+  await getUsers()
+})
+
+/*const {
+  data: users,
+  pending: fetchUsers,
+  error: fetchUsersError,
+    refresh,
+} = useAsyncData('get-users', async () => {
+  let response
+  try {
+    response = await getUsers()
+  } catch (error){}
+  return response;
+})*/
+
 </script>
