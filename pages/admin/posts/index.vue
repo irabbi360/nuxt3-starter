@@ -41,7 +41,6 @@
         <li class="page-item" :class="[currentPage === Math.ceil(totalItem / parPage) ? 'disabled' : '']"><a class="page-link" href="javascript:void (0)" @click.prevent="nextPage">Next</a></li>
       </ul>
     </nav>
-    <pre>{{ Math.ceil(totalItem / parPage) }}</pre>
   </div>
 </template>
 
