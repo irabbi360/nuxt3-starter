@@ -9,7 +9,7 @@
         <!-- End Heading -->
 
         <!-- Form -->
-        <form class="js-validate needs-validation" @click.prevent="authLogin">
+        <form class="js-validate needs-validation">
           <!-- Form -->
           <div class="mb-4">
             <label class="form-label" for="signupSimpleLoginEmail">Your email</label>
@@ -23,7 +23,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <label class="form-label" for="signupSimpleLoginPassword">Password</label>
 
-              <a class="form-label-link" href="./page-reset-password-simple.html">Forgot Password?</a>
+              <a class="form-label-link" href="#">Forgot Password?</a>
             </div>
 
             <div class="input-group input-group-merge" data-hs-validation-validate-class="">
@@ -38,7 +38,7 @@
           <!-- End Form -->
 
           <div class="d-grid mb-3">
-            <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+            <button type="submit" class="btn btn-primary btn-lg" @click.prevent="authLogin">Log in</button>
           </div>
 
           <div class="text-center">

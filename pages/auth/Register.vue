@@ -9,7 +9,7 @@
         <!-- End Heading -->
 
         <!-- Form -->
-        <form class="js-validate needs-validation" @click.prevent="authRegister">
+        <form class="js-validate needs-validation">
           <!-- Form -->
           
           <div class="mb-3">
@@ -63,7 +63,7 @@
           <!-- End Check -->
 
           <div class="d-grid mb-3">
-            <button type="submit" class="btn btn-primary btn-lg">Register</button>
+            <button type="submit" class="btn btn-primary btn-lg" @click.prevent="authRegister">Register</button>
           </div>
 
           <div class="text-center">
