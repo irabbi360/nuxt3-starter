@@ -19,7 +19,9 @@
     </table>
     <nav aria-label="Page navigation example">
       <ul class="pagination">
-        <li class="page-item" :class="[currentPage === 1 ? 'disabled' : '']"><a class="page-link" href="javascript:void (0)" @click.prevent="previousPage">Previous</a></li>
+        <li class="page-item" :class="[currentPage === 1 ? 'disabled' : '']">
+          <a class="page-link" href="javascript:void (0)" @click.prevent="previousPage">Previous</a>
+        </li>
         <li v-if="currentPage - 2 > 0" class="page-item">
           <a class="page-link" href="javascript:void (0)" @click.prevent="onPageChange(currentPage - 2)">{{ currentPage - 2 }}</a>
         </li>
@@ -38,7 +40,9 @@
         <li v-if="currentPage + 3 <= Math.ceil(totalItem / parPage)" class="page-item">
           <a class="page-link" href="javascript:void (0)" @click.prevent="onPageChange(currentPage + 3)">{{ currentPage + 3 }}</a>
         </li>
-        <li class="page-item" :class="[currentPage === Math.ceil(totalItem / parPage) ? 'disabled' : '']"><a class="page-link" href="javascript:void (0)" @click.prevent="nextPage">Next</a></li>
+        <li class="page-item" :class="[currentPage === Math.ceil(totalItem / parPage) ? 'disabled' : '']">
+          <a class="page-link" href="javascript:void (0)" @click.prevent="nextPage">Next</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -48,7 +52,7 @@
 definePageMeta({
   layout: 'admin',
 })
-import {usePosts} from "../../../composables/posts";
+import {usePosts} from "~/composables/posts";
 
 const {posts, getPosts } = usePosts();
 const currentPage = ref(1);
