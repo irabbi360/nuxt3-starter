@@ -13,7 +13,7 @@
                     <span class="badge bg-secondary">Git</span>
                 </div>
                 <div class="card-body">
-                    <p><span class="dollar">$</span> <span class="cmnd"> git clone https://github.com/viandwi24/nuxt3-awesome-starter</span></p>
+                    <p><span class="dollar">$</span> <span class="cmnd"> git clone https://github.com/irabbi360/nuxt3-starter</span></p>
                 </div>
             </div>
             <h4 class="my-3">Development</h4>
