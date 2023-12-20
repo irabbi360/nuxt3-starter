@@ -19,20 +19,39 @@
           </li>
           <ThemeChanger />
           <LangSwitcher />
-          <li class="nav-item">
-            <NuxtLink to="/auth/login" class="nav-link">Login</NuxtLink>
-          </li>
-          <li class="nav-item">
-            <NuxtLink to="/auth/register" class="nav-link">Register</NuxtLink>
-          </li>
+          <template v-if="!authenticated">
+            <li class="nav-item">
+              <NuxtLink to="/auth/login" class="nav-link">Login</NuxtLink>
+            </li>
+            <li class="nav-item">
+              <NuxtLink to="/auth/register" class="nav-link">Register</NuxtLink>
+            </li>
+          </template>
+          <template v-if="authenticated">
+            <li class="nav-item">
+              <nuxt-link class="nav-link" @click="logout">Logout</nuxt-link>
+            </li>
+          </template>
         </ul>
       </div>
     </div>
   </nav>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { localePath } from 'vue-i18n-routing';
+import { storeToRefs } from 'pinia'; // import storeToRefs helper hook from pinia
+import { useAuthStore } from '~/store/auth'; // import the auth store we just created
+
+const router = useRouter();
+
+const { logUserOut } = useAuthStore(); // use authenticateUser action from  auth store
+const { authenticated } = storeToRefs(useAuthStore()); // make authenticated state reactive with storeToRefs
+
+const logout = () => {
+  logUserOut();
+  router.push('/auth/login');
+};
 
 </script>
 

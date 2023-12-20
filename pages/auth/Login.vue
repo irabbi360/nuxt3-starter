@@ -13,7 +13,7 @@
           <!-- Form -->
           <div class="mb-4">
             <label class="form-label" for="signupSimpleLoginEmail">Your email</label>
-            <input type="email" class="form-control form-control-lg" name="email" id="signupSimpleLoginEmail" placeholder="email@site.com" aria-label="email@site.com">
+            <input type="email" v-model="user.username" class="form-control form-control-lg" name="email" id="signupSimpleLoginEmail" placeholder="email@site.com" aria-label="email@site.com">
             <span class="invalid-feedback">Please enter a valid email address.</span>
           </div>
           <!-- End Form -->
@@ -27,7 +27,7 @@
             </div>
 
             <div class="input-group input-group-merge" data-hs-validation-validate-class="">
-              <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupSimpleLoginPassword" placeholder="8+ characters required" aria-label="8+ characters required" minlength="8">
+              <input type="password" v-model="user.password" class="js-toggle-password form-control form-control-lg" name="password" id="signupSimpleLoginPassword" placeholder="8+ characters required" aria-label="8+ characters required" minlength="8">
               <a id="changePassTarget" class="input-group-append input-group-text" href="javascript:;">
                 <i id="changePassIcon" class="bi-eye-slash"></i>
               </a>
@@ -38,7 +38,7 @@
           <!-- End Form -->
 
           <div class="d-grid mb-3">
-            <button type="submit" class="btn btn-primary btn-lg" @click.prevent="authLogin">Log in</button>
+            <button type="submit" class="btn btn-primary btn-lg" @click.prevent="login">Log in</button>
           </div>
 
           <div class="text-center">
@@ -52,10 +52,29 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
+import { storeToRefs } from 'pinia'; // import storeToRefs helper hook from pinia
+import { useAuthStore } from '~/store/auth'; // import the auth store we just created
+
+const { authenticateUser } = useAuthStore(); // use authenticateUser action from  auth store
+
+const { authenticated } = storeToRefs(useAuthStore()); // make authenticated state reactive with storeToRefs
 
 const router = useRouter();
+
+const user = ref({
+  username: '',
+  password: '',
+});
 
 const authLogin = () => {
   router.push('/admin')
 }
+
+const login = async () => {
+  await authenticateUser(user.value); // call authenticateUser and pass the user object
+  // redirect to homepage if user is authenticated
+  if (authenticated.value) {
+    router.push('/admin');
+  }
+};
 </script>

@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     components: {global: true, dirs: ['~/components']},
     modules: [
         '@nuxtjs/i18n',
+        '@pinia/nuxt',
     ],
     i18n: {
         strategy: 'no_prefix',
