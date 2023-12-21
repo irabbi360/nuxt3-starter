@@ -19,20 +19,48 @@
           </li>
           <ThemeChanger />
           <LangSwitcher />
-          <li class="nav-item">
-            <NuxtLink to="/auth/login" class="nav-link">Login</NuxtLink>
-          </li>
-          <li class="nav-item">
-            <NuxtLink to="/auth/register" class="nav-link">Register</NuxtLink>
-          </li>
+          <template v-if="!authenticated">
+            <li class="nav-item">
+              <NuxtLink to="/auth/login" class="nav-link">Login</NuxtLink>
+            </li>
+            <li class="nav-item">
+              <NuxtLink to="/auth/register" class="nav-link">Register</NuxtLink>
+            </li>
+          </template>
+          <template v-if="authenticated">
+            <li class="nav-item dropdown">
+              <a href="javascript:void(0)" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" id="auth-dropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                Mr Admin
+              </a>
+              <ul class="dropdown-menu dropdown-menu-md-end border-0 shadow-lg rounded-0" aria-labelledby="auth-dropdown">
+                <li><NuxtLink :to="{name: 'admin'}" class="dropdown-item">Dashboard</NuxtLink></li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <NuxtLink class="dropdown-item" @click="logout">Logout</NuxtLink>
+                </li>
+              </ul>
+            </li>
+          </template>
         </ul>
       </div>
     </div>
   </nav>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { localePath } from 'vue-i18n-routing';
+import { storeToRefs } from 'pinia'; // import storeToRefs helper hook from pinia
+import { useAuthStore } from '~/store/auth'; // import the auth store we just created
+
+const router = useRouter();
+
+const { logUserOut } = useAuthStore(); // use authenticateUser action from  auth store
+const { authenticated } = storeToRefs(useAuthStore()); // make authenticated state reactive with storeToRefs
+
+const logout = () => {
+  logUserOut();
+  router.push('/auth/login');
+};
 
 </script>
 
