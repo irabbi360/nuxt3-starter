@@ -62,8 +62,8 @@ const { authenticated } = storeToRefs(useAuthStore()); // make authenticated sta
 const router = useRouter();
 
 const user = ref({
-  username: '',
-  password: '',
+  username: 'kminchelle',
+  password: '0lelplR',
 });
 
 const authLogin = () => {

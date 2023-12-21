@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+    ssr: process.env.NODE_ENV !== "development",
     runtimeConfig: {
         public: {
             API_BASE_URL: process.env.API_URL
@@ -17,7 +18,6 @@ export default defineNuxtConfig({
             ],
         }
     },
-    ssr: process.env.NODE_ENV !== "development",
 
     css: ['~/assets/scss/style.scss', '~/assets/css/dashboard.css'],
 

@@ -28,8 +28,17 @@
             </li>
           </template>
           <template v-if="authenticated">
-            <li class="nav-item">
-              <nuxt-link class="nav-link" @click="logout">Logout</nuxt-link>
+            <li class="nav-item dropdown">
+              <a href="javascript:void(0)" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" id="auth-dropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                Mr Admin
+              </a>
+              <ul class="dropdown-menu dropdown-menu-md-end border-0 shadow-lg rounded-0" aria-labelledby="auth-dropdown">
+                <li><NuxtLink :to="{name: 'admin'}" class="dropdown-item">Dashboard</NuxtLink></li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <NuxtLink class="dropdown-item" @click="logout">Logout</NuxtLink>
+                </li>
+              </ul>
             </li>
           </template>
         </ul>

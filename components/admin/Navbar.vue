@@ -21,9 +21,7 @@
           <li><a class="dropdown-item" href="#">Change Password</a></li>
           <li><hr class="dropdown-divider"></li>
           <li>
-            <NuxtLink to="/" class="dropdown-item">
-                Logout
-            </NuxtLink>
+            <NuxtLink class="dropdown-item" @click="logout">Logout</NuxtLink>
           </li>
       </ul>
     </div>
@@ -31,6 +29,20 @@
 </template>
 
 <script setup>
+import { storeToRefs } from 'pinia'; // import storeToRefs helper hook from pinia
+import { useAuthStore } from '~/store/auth'; // import the auth store we just created
+
+const router = useRouter();
+
+const { logUserOut } = useAuthStore(); // use authenticateUser action from  auth store
+const { authenticated } = storeToRefs(useAuthStore()); // make authenticated state reactive with storeToRefs
+
+const logout = () => {
+  logUserOut();
+  router.push('/auth/login');
+};
+
+
 const storedTheme = localStorage.getItem('theme');
 const selectedTheme = ref(storedTheme ?? 'dark');
 
