@@ -33,11 +33,7 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
     ],
     i18n: {
-        strategy: 'no_prefix',
-        vueI18n: {
-            legacy: false,
-            locale: 'en',
-        },
+        vueI18n: './lib/i18n.config.ts',
         locales: [
             {
                 code: 'en',
