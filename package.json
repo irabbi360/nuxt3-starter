@@ -19,7 +19,7 @@
   "devDependencies": {
     "@nuxtjs/i18n": "^8.3.1",
     "@pinia/nuxt": "^0.5.1",
-    "nuxt": "^3.11.2",
+    "nuxt": "^3.13.2",
     "pinia": "^2.1.7"
   },
   "dependencies": {
