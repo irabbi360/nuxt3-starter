@@ -12,8 +12,16 @@
   padding-top: 5.5rem!important;
   padding-bottom: 5.5rem!important;
 }
-
-
+.them {
+  .navbar-brand svg {
+    color: rgba(59,166,118);
+  }
+}
+.admin{
+  .navbar-brand svg {
+    color: rgba(59,166,118);
+  }
+}
 ::-webkit-scrollbar {
   width: 10px;
 }

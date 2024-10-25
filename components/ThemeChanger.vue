@@ -1,5 +1,5 @@
 <template>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown them">
         <a class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
                 id="bd-theme"
                 aria-expanded="false"
@@ -211,20 +211,6 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () 
   }
 })
 
-/*window.addEventListener('DOMContentLoaded', () => {
-  showActiveTheme(getPreferredTheme())
-
-  document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          console.log('hiiiiiiiiii');
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          localStorage.setItem('theme', theme)
-          setTheme(theme)
-          showActiveTheme(theme)
-        })
-      })
-})*/
 </script>
 
 <style scoped>

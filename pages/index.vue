@@ -1,3 +1,13 @@
+<script setup>
+const { updateMeta } = useSeo();
+
+updateMeta({
+  title: 'Nuxt 3 Starter Template',
+  description: 'Welcome to Nuxt 3 Starter'
+});
+
+</script>
+
 <template>
     <div class="container">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -15,9 +25,6 @@
       </div>
     </div>
 </template>
-
-<script setup>
-</script>
 
 <style>
 

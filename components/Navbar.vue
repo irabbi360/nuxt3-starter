@@ -17,8 +17,10 @@
           <li class="nav-item">
             <NuxtLink to="/blank" class="nav-link">Blank</NuxtLink>
           </li>
-          <ThemeChanger />
-          <LangSwitcher />
+          <client-only>
+            <ThemeChanger />
+            <LangSwitcher />
+          </client-only>
           <template v-if="!authenticated">
             <li class="nav-item">
               <NuxtLink to="/auth/login" class="nav-link">Login</NuxtLink>
@@ -64,7 +66,5 @@ const logout = () => {
 </script>
 
 <style scoped>
-.navbar-brand svg {
-  color: rgba(59,166,118);
-}
+
 </style>

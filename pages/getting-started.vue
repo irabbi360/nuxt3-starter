@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const { updateMeta } = useSeo();
 
-<script setup>
+updateMeta({
+  title: 'Getting Started',
+});
 </script>
 <template>
     <div class="my-3">
