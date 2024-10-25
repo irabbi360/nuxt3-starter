@@ -20,7 +20,6 @@
   const crumbs = computed(() => {
     const crumbs = []
     route.matched.forEach((item, i, { length }) => {
-      console.log(i, 'ddd')
       const crumb = {}
       crumb.path = item.path
       crumb.name = item.name.substr(6)
