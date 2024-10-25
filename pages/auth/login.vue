@@ -54,6 +54,7 @@
 import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia'; // import storeToRefs helper hook from pinia
 import { useAuthStore } from '~/store/auth'; // import the auth store we just created
+const { updateMeta } = useSeo();
 
 const { authenticateUser } = useAuthStore(); // use authenticateUser action from  auth store
 
@@ -77,4 +78,8 @@ const login = async () => {
     router.push('/admin');
   }
 };
+
+updateMeta({
+  title: 'Login',
+});
 </script>

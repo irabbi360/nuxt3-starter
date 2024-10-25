@@ -1,10 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-    ssr: process.env.NODE_ENV !== "development",
     runtimeConfig: {
         public: {
-            API_BASE_URL: process.env.API_URL
+            API_BASE_URL: process.env.API_URL,
+            APP_BASE_URL: process.env.APP_URL,
         }
     },
     app: {
@@ -12,9 +12,15 @@ export default defineNuxtConfig({
             charset: 'utf-16',
             viewport: 'width=500, initial-scale=1',
             title: 'Nuxt 3 Starter Template',
+            // titleTemplate: '%s %separator %siteName',
             meta: [
                 // <meta name="description" content="My amazing site">
-                {name: 'description', content: 'Nuxt 3 Starter'}
+                {name: 'description', content: 'Nuxt 3 Starter'},
+                { property: 'og:locale', content: 'en_US' },
+                { property: 'og:type', content: 'website' },
+                { property: 'og:site_name', content: 'Nuxt 3 Starter' },
+                { property: 'twitter:card', content: 'summary' },
+                { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
             ],
         }
     },
@@ -31,14 +37,22 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/i18n',
         '@pinia/nuxt',
+        '@nuxt/image',
+        '@nuxtjs/robots'
     ],
     i18n: {
         vueI18n: './lib/i18n.config.ts',
+        strategy: 'no_prefix',
         locales: [
             {
                 code: 'en',
                 name: 'English',
                 file: 'en-US.json'
+            },
+            {
+                code: 'bn',
+                name: 'Bangla',
+                file: 'bn-BD.json'
             },
             {
                 code: 'es',

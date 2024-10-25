@@ -8,7 +8,7 @@ const availableLocales = computed(() => {
 </script>
 
 <template>
-  <li class="nav-item dropdown">
+  <li class="nav-item dropdown theme">
     <a class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center text-capitalize"
             id="lang-change"
             aria-expanded="false"
@@ -29,10 +29,5 @@ const availableLocales = computed(() => {
 </template>
 
 <style scoped>
-  .bi {
-    width: 1em;
-    height: 1em;
-    vertical-align: -.125em;
-    fill: currentcolor;
-  }
+
 </style>

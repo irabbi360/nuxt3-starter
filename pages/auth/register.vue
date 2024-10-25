@@ -77,10 +77,15 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
+const { updateMeta } = useSeo();
 
 const router = useRouter();
 
 const authRegister = () => {
   router.push('/admin');
 }
+
+updateMeta({
+  title: 'Register',
+});
 </script>
