@@ -24,7 +24,7 @@ export const useAuthStore = defineStore('auth', {
         });
 
         if (data) {
-          const token = useCookie('token'); // useCookie new hook in nuxt 3
+          const token = useCookie('token'); // Nuxt 3 cookie handling
           token.value = data.accessToken; // set token to cookie
           this.authenticated = true; // set authenticated state to true
         }
@@ -33,9 +33,14 @@ export const useAuthStore = defineStore('auth', {
       }
     },
     logUserOut() {
-      const token = useCookie('token'); // useCookie new hook in nuxt 3
-      this.authenticated = false; // set authenticated state to false
+      const token = useCookie('token');
+      this.authenticated = false;
       token.value = null; // clear the token cookie
+    },
+    hydrate() {
+      const token = useCookie('token');
+      this.authenticated = Boolean(token.value); // set authenticated to true if token exists
     },
   },
 });
+

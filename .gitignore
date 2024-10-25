@@ -7,3 +7,6 @@ node_modules
 .env
 dist
 .idea/
+/.vscode
+yarn.lock
+package-lock.json

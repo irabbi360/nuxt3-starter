@@ -38,7 +38,9 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         '@pinia/nuxt',
         '@nuxt/image',
-        '@nuxtjs/robots'
+        '@nuxtjs/robots',
+        '@pinia/nuxt',
+        'pinia-plugin-persistedstate/nuxt',
     ],
     i18n: {
         vueI18n: './lib/i18n.config.ts',
