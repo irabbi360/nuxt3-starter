@@ -13,7 +13,7 @@ authStore.hydrate();
 <template>
   <NuxtLayout>
     <NuxtLoadingIndicator/>
-    <div class="container">
+    <div>
       <NuxtPage/>
     </div>
   </NuxtLayout>

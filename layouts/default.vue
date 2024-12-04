@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <Navbar/>
-        <slot />
-    </div>
-  </template>
+    <Navbar :toggleDarkMode="toggleDarkMode" :darkMode="darkMode"/>
+    <slot />
+</template>
 
 <script lang="ts" setup>
   import { storeToRefs } from 'pinia'; // import storeToRefs helper hook from pinia
@@ -19,4 +17,14 @@
     logUserOut();
     router.push('/login');
   };
+
+  const darkMode = ref(false)
+  const toggleDarkMode = () => {
+    darkMode.value = !darkMode.value;
+    if (darkMode.value) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
 </script>
