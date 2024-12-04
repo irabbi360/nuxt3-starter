@@ -7,6 +7,7 @@ export default defineNuxtConfig({
             APP_BASE_URL: process.env.APP_URL,
         }
     },
+    compatibilityDate: '2024-04-03',
     app: {
         head: {
             charset: 'utf-16',
@@ -25,16 +26,9 @@ export default defineNuxtConfig({
         }
     },
 
-    css: ['~/assets/scss/style.scss', '~/assets/css/dashboard.css'],
-
-    plugins: [
-        {
-            src: 'plugins/bootstrap.js',
-            mode: 'client'
-        }
-    ],
     components: {global: true, dirs: ['~/components']},
     modules: [
+        '@nuxtjs/tailwindcss',
         '@nuxtjs/i18n',
         '@pinia/nuxt',
         '@nuxt/image',
