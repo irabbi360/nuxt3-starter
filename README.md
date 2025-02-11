@@ -19,6 +19,12 @@ This boilerplate uses the following tools::
 git clone https://github.com/irabbi360/nuxt3-starter.git
 ```
 
+Navigate to the project's root directory:
+
+```bash
+cd nuxt3-starter
+```
+
 Make sure to install the dependencies:
 
 ```bash
